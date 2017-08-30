@@ -2,6 +2,9 @@ var Marionette = require('backbone.marionette');
 var LeftView = require('views/leftview')
 var RightView = require('views/rightview')
 var BottomView = require('views/bottomview')
+
+var LeftModel = require('models/leftmodel')
+
 require('css/style.css')
 
 var layoutview = Marionette.LayoutView.extend({
@@ -13,8 +16,15 @@ var layoutview = Marionette.LayoutView.extend({
 			'bottom': '#div3',
 		},
 		onShow: function(){
-			console.log(' hello 2 ');
-			var leftView = new LeftView();
+
+			var leftModel = new LeftModel({
+				'a': 5, 
+				'b': 3
+			});
+
+			var leftView = new LeftView({
+				model: leftModel
+			});
 			var rightView = new RightView();
 			var bottomView = new BottomView();	
 

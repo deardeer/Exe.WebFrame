@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "css-loader": "^0.28.5",
+    "d3": "^4.10.0",
     "style": "0.0.3",
     "style-loader": "^0.18.2"
   }
